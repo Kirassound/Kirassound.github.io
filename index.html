@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gary Ávila | Portafolio Profesional</title>
+    <title>Gary Avila | Portafolio de Ingeniería de Redes y Ciberseguridad</title>
     <style>
         body { font-family: 'Arial', sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 0; line-height: 1.6; }
         header { background-color: #161b22; padding: 40px 20px; text-align: center; border-bottom: 2px solid #21262d; }
@@ -11,57 +11,91 @@
         header p { color: #8b949e; font-size: 1.2em; margin: 10px 0 0 0; }
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         .section-title { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-top: 40px; }
-        .project-card { background-color: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 20px; margin-bottom: 25px; }
+        .project-card { background-color: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 20px; margin-bottom: 25px; transition: border-color 0.2s; }
+        .project-card:hover { border-color: #58a6ff; }
         .tags { margin: 15px 0; }
         .tag { background-color: #21262d; color: #58a6ff; padding: 5px 10px; border-radius: 15px; font-size: 0.85em; margin-right: 8px; border: 1px solid #30363d; }
         .project-card h3 { color: #ffffff; margin-top: 0; }
+        .download-link { display: inline-block; margin-top: 15px; color: #58a6ff; font-weight: bold; text-decoration: none; }
+        .download-link:hover { text-decoration: underline; }
         footer { text-align: center; padding: 40px 20px; color: #8b949e; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Gary Ávila</h1>
-    <p>Profesional en Infraestructura de Redes y Ciberseguridad</p>
+    <h1>Gary Avila</h1>
+    <p>Ingeniería de Redes e Infraestructura de Ciberseguridad</p>
 </header>
 
 <div class="container">
     <h2 class="section-title">Sobre Mí</h2>
-    <p>Especialista técnico enfocado en el diseño de infraestructuras WAN/LAN, priorización de tráfico crítico (QoS), despliegue de sistemas defensivos NIDS y auditoría/análisis de vulnerabilidades en entornos controlados.</p>
+    <p>Especialista técnico enfocado en el despliegue de infraestructuras críticas corporativas. Experiencia práctica en el diseño y enrutamiento dinámico WAN escalable, auditorías automatizadas de vulnerabilidades (Nessus), aseguramiento perimetral con sistemas NIDS y análisis dinámico forense de malware estructurado en entornos controlados y aislados (Sandbox).</p>
 
-    <h2 class="section-title">Casos de Estudio y Proyectos de Ingeniería</h2>
+    <h2 class="section-title">Casos de Estudio Técnicos de Ingeniería</h2>
 
-    <!-- Proyecto 1: OSPF y QoS -->
     <div class="project-card">
-        <h3>1. Diseño de Red WAN Escalable con Enrutamiento OSPF y Políticas QoS (MQC)</h3>
-        <p>Implementación de una topología Hub-and-Spoke interconectando tres sucursales logísticas corporativas. Optimización del espacio de direccionamiento mediante ingeniería VLSM (bloques /29 y /30). Configuración del protocolo dinámico OSPF para convergencia rápida y despliegue de políticas de Calidad de Servicio utilizando el modelo MQC para clasificar y priorizar tráfico crítico de Videollamadas (UDP) y asegurar el ancho de banda del sistema ERP corporativo.</p>
-        <div class="tags"><span class="tag">Cisco Packet Tracer</span><span class="tag">OSPF</span><span class="tag">QoS (MQC)</span><span class="tag">VLSM</span></div>
+        <h3>1. Diseño e Implementación de Red WAN Escalable con Enrutamiento OSPF y Políticas de QoS</h3>
+        <p>Modelado de una infraestructura WAN escalable corporativa tipo Hub-and-Spoke. Aplicación de ingeniería de direccionamiento sin clase mediante VLSM con bloques /29 para segmentos LAN y /30 para enlaces seriales punto a punto. Configuración y convergencia dinámica de rutas mediante el protocolo OSPF en Área 0. Despliegue de políticas de Calidad de Servicio mediante la arquitectura modular MQC para mitigar la congestión perimetral, garantizando una cola de prioridad estricta absoluta (LLQ) del 30% para flujos de videollamadas en tiempo real y una reserva basada en clases (CBWFQ) del 20% para el tráfico del sistema transaccional ERP.</p>
+        <div class="tags">
+            <span class="tag">Cisco IOS</span>
+            <span class="tag">OSPF Dynamic Routing</span>
+            <span class="tag">QoS (MQC Frame)</span>
+            <span class="tag">VLSM Addressing</span>
+        </div>
+        <a href="Caso Técnico - Diseño e Implementación de Red WAN, OSPF y QoS Modificable.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
     </div>
 
-    <!-- Proyecto 2: Nessus -->
     <div class="project-card">
-        <h3>2. Auditoría Técnica y Gestión de Vulnerabilidades en Entornos de Desarrollo con Nessus</h3>
-        <p>Simulación de análisis de riesgos previo a pasos a producción sobre el nodo vulnerable Metasploitable 3. Ejecución de escaneos completos no autenticados de puertos (1-65535) utilizando Nessus Essentials. Identificación y clasificación de fallas críticas de severidad (CVSS 9.8 y 10.0), documentando brechas graves en servidores Apache Tomcat obsoletos, fallos de ejecución remota de código (RCE) en Elasticsearch y debilidades de cifrado SSL/TLS (Logjam).</p>
-        <div class="tags"><span class="tag">Nessus Essentials</span><span class="tag">Metasploitable 3</span><span class="tag">Análisis de Vulnerabilidades</span><span class="tag">Cifrado TLS</span></div>
+        <h3>2. Implementación de NIDS Snort y Análisis de Tráfico Perimetral</h3>
+        <p>Despliegue perimetral y optimización del Sistema de Detección de Intrusos (NIDS) de código abierto Snort en una instancia Linux Ubuntu Server. Configuración técnica del adaptador de red virtual al estado promiscuo absoluto en la Capa 2 para evadir el filtrado por hardware del conmutador y capturar el flujo promiscuo circulante. Codificación granular y depuración sintáctica del fichero de firmas local para la monitorización e interceptación en tiempo real de solicitudes ICMP, accesos de socket HTTP (Puerto 80), sesiones SSH (Puerto 22) y anomalías estructurales avanzadas por inyección de flags TCP FIN, PSH y URG simultáneos (Escaneos tácticos Nmap XMAS).</p>
+        <div class="tags">
+            <span class="tag">Snort NIDS</span>
+            <span class="tag">Ubuntu Server</span>
+            <span class="tag">Modo Promiscuo (Capa 2)</span>
+            <span class="tag">Deep Packet Inspection</span>
+        </div>
+        <a href="Configuración y Despliegue de Snort NIDS.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
     </div>
 
-    <!-- Proyecto 3: Snort -->
     <div class="project-card">
-        <h3>3. Auditoría Perimetral e Intercepción de Tráfico Inter-VLAN mediante Snort NIDS</h3>
-        <p>Configuración de una infraestructura segmentada con enrutamiento perimetral Router-on-a-Stick (Cisco c3725) en GNS3. Integración de una máquina de auditoría Ubuntu Server forzando el adaptador al estado de modo promiscuo. Programación de firmas y reglas locales personalizadas para detectar y alertar en tiempo real paquetes ICMP, conexiones SSH/HTTP ilegítimas y escaneos sigilosos tácticos (Nmap XMAS).</p>
-        <div class="tags"><span class="tag">GNS3</span><span class="tag">Snort NIDS</span><span class="tag">Router-on-a-Stick</span><span class="tag">Modo Promiscuo</span></div>
+        <h3>3. Análisis Dinámico de Malware y Mecanismos de Persistencia del Ransomware WannaCry</h3>
+        <p>Estudio procedimental dinámico y forense del comportamiento e impacto operacional de la muestra histórica destructiva de WannaCry dentro de una arquitectura hermética de contención (Sandbox). Implementación de directivas estrictas de aislamiento de invitados en el hipervisor VMware desactivando canales de comunicación compartida y portapapeles lógicos. Configuración de direccionamiento estático e intercepción de red mediante la emulación pasiva de servicios globales de Internet con la suite INetSim sobre REMnux. Análisis detallado de los indicadores de compromiso (IoC) ejecutados en el endpoint víctima (Flare-VM Windows), catalogando la inyección de sub-binarios, la mutación asimétrica de archivos a extensión .WNCRY y la alteración de descriptores de seguridad críticos.</p>
+        <div class="tags">
+            <span class="tag">Malware Sandboxing</span>
+            <span class="tag">INetSim Simulation</span>
+            <span class="tag">Flare-VM / REMnux</span>
+            <span class="tag">Indicators of Compromise (IoC)</span>
+        </div>
+        <a href="Análisis Dinámico de Malware - Ejecución de WannaCry.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
     </div>
 
-    <!-- Proyecto 4: WannaCry -->
     <div class="project-card">
-        <h3>4. Análisis Dinámico de Malware en Entornos Aislados: Ejecución Controlada de WannaCry</h3>
-        <p>Despliegue de un laboratorio de análisis dinámico totalmente aislado dentro del hipervisor mediante segmentos LAN dedicados. Descarga segura y descompresión de la muestra real del ransomware WannaCry utilizando plataformas Flare-VM y REMnux. Configuración de direccionamiento estático y simulación completa de servicios esenciales de internet mediante INetSim para capturar e interceptar los Indicadores de Compromiso (IoC) y estudiar las afectaciones operativas del cifrado masivo.</p>
-        <div class="tags"><span class="tag">Malware Analysis</span><span class="tag">Flare-VM</span><span class="tag">REMnux</span><span class="tag">INetSim</span><span class="tag">Seguridad Defensiva</span></div>
+        <h3>4. Dimensionamiento de Capacidad y Arquitectura de Tráfico Inalámbrico (WLAN)</h3>
+        <p>Aplicación de una metodología métrica de ingeniería de tráfico para la planificación de capacidad y ancho de banda en infraestructuras operativas con perfiles asimétricos. Modelado de carga y cálculo de concurrencia/sobresuscripción técnica para entornos de logística industrial (lectores móviles y CCTV bajo Wi-Fi 6 IEEE 802.11ax con optimización OFDMA/TWT) y agencias bancarias corporativas. Estructuración granular de segmentación lógica robusta mediante el estándar 802.1Q (VLANs dedicadas para ATMs, Operaciones y redes Guest) para mitigar vectores de movimiento lateral y dar cumplimiento a regulaciones financieras internacionales.</p>
+        <div class="tags">
+            <span class="tag">WLAN Capacity Planning</span>
+            <span class="tag">Wi-Fi 6 (802.11ax)</span>
+            <span class="tag">Traffic Engineering</span>
+            <span class="tag">802.1Q Network Isolation</span>
+        </div>
+        <a href="Ingeniería de Tráfico - Dimensionamiento de Ancho de Banda WLAN V3.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
+    </div>
+
+    <div class="project-card">
+        <h3>5. Auditoría de Seguridad - Análisis Automatizado de Vulnerabilidades Perimetrales con Nessus</h3>
+        <p>Evaluación de seguridad, metodología de escaneos perimetrales y análisis profundo de hallazgos críticos detectados sobre un nodo de desarrollo expuesto utilizando el motor de escaneo automatizado Tenable Nessus Essentials bajo modalidad de caja negra (escaneo no autenticado).</p>
+        <div class="tags">
+            <span class="tag">Nessus Essentials</span>
+            <span class="tag">Metasploitable 3</span>
+            <span class="tag">Vulnerability Management</span>
+        </div>
+        <a href="Auditoría de Seguridad - Análisis Automatizado de Vulnerabilidades Perimetrales con Nessus V4.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Gary Ávila. Hospedado de forma segura en GitHub Pages.</p>
+    <p>&copy; 2026 Gary Avila. Hospedado con integridad en GitHub Pages.</p>
 </footer>
 </body>
 </html>
