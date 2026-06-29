@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gary Ávila | Portafolio Profesional</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 0; line-height: 1.6; }
+        header { background-color: #161b22; padding: 40px 20px; text-align: center; border-bottom: 2px solid #21262d; }
+        header h1 { color: #58a6ff; margin: 0; font-size: 2.5em; }
+        header p { color: #8b949e; font-size: 1.2em; margin: 10px 0 0 0; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .section-title { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-top: 40px; }
+        .project-card { background-color: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 20px; margin-bottom: 25px; }
+        .tags { margin: 15px 0; }
+        .tag { background-color: #21262d; color: #58a6ff; padding: 5px 10px; border-radius: 15px; font-size: 0.85em; margin-right: 8px; border: 1px solid #30363d; }
+        .project-card h3 { color: #ffffff; margin-top: 0; }
+        footer { text-align: center; padding: 40px 20px; color: #8b949e; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Gary Ávila</h1>
+    <p>Profesional en Infraestructura de Redes y Ciberseguridad</p>
+</header>
+
+<div class="container">
+    <h2 class="section-title">Sobre Mí</h2>
+    <p>Especialista técnico enfocado en el diseño de infraestructuras WAN/LAN, priorización de tráfico crítico (QoS), despliegue de sistemas defensivos NIDS y auditoría/análisis de vulnerabilidades en entornos controlados.</p>
+
+    <h2 class="section-title">Casos de Estudio y Proyectos de Ingeniería</h2>
+
+    <!-- Proyecto 1: OSPF y QoS -->
+    <div class="project-card">
+        <h3>1. Diseño de Red WAN Escalable con Enrutamiento OSPF y Políticas QoS (MQC)</h3>
+        <p>Implementación de una topología Hub-and-Spoke interconectando tres sucursales logísticas corporativas. Optimización del espacio de direccionamiento mediante ingeniería VLSM (bloques /29 y /30). Configuración del protocolo dinámico OSPF para convergencia rápida y despliegue de políticas de Calidad de Servicio utilizando el modelo MQC para clasificar y priorizar tráfico crítico de Videollamadas (UDP) y asegurar el ancho de banda del sistema ERP corporativo.</p>
+        <div class="tags"><span class="tag">Cisco Packet Tracer</span><span class="tag">OSPF</span><span class="tag">QoS (MQC)</span><span class="tag">VLSM</span></div>
+    </div>
+
+    <!-- Proyecto 2: Nessus -->
+    <div class="project-card">
+        <h3>2. Auditoría Técnica y Gestión de Vulnerabilidades en Entornos de Desarrollo con Nessus</h3>
+        <p>Simulación de análisis de riesgos previo a pasos a producción sobre el nodo vulnerable Metasploitable 3. Ejecución de escaneos completos no autenticados de puertos (1-65535) utilizando Nessus Essentials. Identificación y clasificación de fallas críticas de severidad (CVSS 9.8 y 10.0), documentando brechas graves en servidores Apache Tomcat obsoletos, fallos de ejecución remota de código (RCE) en Elasticsearch y debilidades de cifrado SSL/TLS (Logjam).</p>
+        <div class="tags"><span class="tag">Nessus Essentials</span><span class="tag">Metasploitable 3</span><span class="tag">Análisis de Vulnerabilidades</span><span class="tag">Cifrado TLS</span></div>
+    </div>
+
+    <!-- Proyecto 3: Snort -->
+    <div class="project-card">
+        <h3>3. Auditoría Perimetral e Intercepción de Tráfico Inter-VLAN mediante Snort NIDS</h3>
+        <p>Configuración de una infraestructura segmentada con enrutamiento perimetral Router-on-a-Stick (Cisco c3725) en GNS3. Integración de una máquina de auditoría Ubuntu Server forzando el adaptador al estado de modo promiscuo. Programación de firmas y reglas locales personalizadas para detectar y alertar en tiempo real paquetes ICMP, conexiones SSH/HTTP ilegítimas y escaneos sigilosos tácticos (Nmap XMAS).</p>
+        <div class="tags"><span class="tag">GNS3</span><span class="tag">Snort NIDS</span><span class="tag">Router-on-a-Stick</span><span class="tag">Modo Promiscuo</span></div>
+    </div>
+
+    <!-- Proyecto 4: WannaCry -->
+    <div class="project-card">
+        <h3>4. Análisis Dinámico de Malware en Entornos Aislados: Ejecución Controlada de WannaCry</h3>
+        <p>Despliegue de un laboratorio de análisis dinámico totalmente aislado dentro del hipervisor mediante segmentos LAN dedicados. Descarga segura y descompresión de la muestra real del ransomware WannaCry utilizando plataformas Flare-VM y REMnux. Configuración de direccionamiento estático y simulación completa de servicios esenciales de internet mediante INetSim para capturar e interceptar los Indicadores de Compromiso (IoC) y estudiar las afectaciones operativas del cifrado masivo.</p>
+        <div class="tags"><span class="tag">Malware Analysis</span><span class="tag">Flare-VM</span><span class="tag">REMnux</span><span class="tag">INetSim</span><span class="tag">Seguridad Defensiva</span></div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Gary Ávila. Hospedado de forma segura en GitHub Pages.</p>
+</footer>
+</body>
+</html>
