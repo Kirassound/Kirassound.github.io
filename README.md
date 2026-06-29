@@ -1,6 +1,6 @@
 # Bienvenidos a mi portafolio 👋
 
-Soy **Gary A.**, estudiante de la carrera de **Infraestructura en Redes y Ciberseguridad**.  
+Soy **Gary Avila.**, estudiante de la carrera de **Infraestructura en Redes y Ciberseguridad**.  
 En este espacio encontrarás una selección de mis mejores proyectos y trabajos realizados durante mi formación académica y práctica profesional.  
 
 Mi objetivo es compartir con ustedes las habilidades que he desarrollado y demostrar mi compromiso con la excelencia en el ámbito tecnológico.  
