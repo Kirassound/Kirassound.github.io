@@ -1,151 +1,511 @@
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gary Avila | Portafolio de Infraestructura en Redes y Ciberseguridad</title>
+
+<title>Gary Avila | Diseño Gráfico e Ilustración</title>
+
 <style>
-body { 
-    font-family: 'Arial', sans-serif; 
-    background-color: #1e222b; 
-    color: #ff6b00; 
-    margin: 0; 
-    padding: 0; 
-    line-height: 1.6; 
+
+:root {
+    --bg: #1e222b;
+    --card: #282c34;
+    --line: #3e4451;
+    --blue: #4da3ff;
+    --orange: #ff6b00;
+    --white: #f2f2f2;
+    --gray: #aeb4bf;
 }
-header { 
-    background-color: #282c34; 
-    padding: 40px 20px; 
-    text-align: center; 
-    border-bottom: 2px solid #3e4451; 
+
+* {
+    box-sizing: border-box;
 }
-header h1 { 
-    color: #ff5500; 
-    margin: 0; 
-    font-size: 2.5em; 
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    margin: 0;
+    line-height: 1.6;
 }
-header p { 
-    color: #ff6b00; 
-    font-size: 1.2em; 
-    margin: 10px 0 0 0; 
+
+/* HEADER */
+
+header {
+    background: var(--card);
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--line);
 }
-.container { 
-    max-width: 900px; 
-    margin: 40px auto; 
-    padding: 0 20px; 
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: var(--white);
 }
-.section-title { 
-    color: #ff5500; 
-    border-bottom: 1px solid #3e4451; 
-    padding-bottom: 10px; 
-    margin-top: 40px; 
+
+header h1 span {
+    color: var(--orange);
 }
-.project-card { 
-    background-color: #282c34; 
-    border: 1px solid #3e4451; 
-    border-radius: 6px; 
-    padding: 20px; 
-    margin-bottom: 25px; 
-    transition: all 0.2s ease-in-out; 
+
+header p {
+    color: var(--gray);
+    font-size: 1.15em;
+    margin: 12px 0 0;
 }
-.project-card:hover { 
-    border-color: #ff5500; 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 20px rgba(255, 85, 0, 0.15); 
+
+/* NAVEGACIÓN */
+
+.nav {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--line);
 }
-.tags { 
-    margin: 15px 0; 
+
+.nav a {
+    color: var(--gray);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
 }
-.tag { 
-    background-color: #1e222b; 
-    color: #ff6b00; 
-    padding: 5px 10px; 
-    border-radius: 15px; 
-    font-size: 0.85em; 
-    margin-right: 8px; 
-    border: 1px solid #3e4451; 
+
+.nav a:hover {
+    color: var(--orange);
 }
-.project-card h3 { 
-    color: #ff5500; 
-    margin-top: 0; 
+
+/* CONTENEDOR */
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
 }
-.download-link { 
-    display: inline-block; 
-    margin-top: 15px; 
-    color: #ff5500; 
-    font-weight: bold; 
-    text-decoration: none; 
+
+/* TÍTULOS */
+
+.section-title {
+    color: var(--orange);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin-top: 60px;
 }
-.download-link:hover { 
-    text-decoration: underline; 
-    color: #ff6b00; 
+
+/* SOBRE MÍ */
+
+.about {
+    color: var(--gray);
+    max-width: 850px;
 }
-.justify-text { 
-    text-align: justify; 
+
+/* HABILIDADES */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
 }
-footer { 
-    text-align: center; 
-    padding: 40px 20px; 
-    color: #ff6b00; 
-    font-size: 0.9em; 
-    border-top: 1px solid #3e4451; 
-    margin-top: 60px; 
+
+.skill-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px;
 }
+
+.skill-card h3 {
+    color: var(--orange);
+    margin-top: 0;
+}
+
+.skill-card p {
+    color: var(--gray);
+}
+
+/* PROYECTOS */
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 0;
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--orange);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.12);
+}
+
+.project-number {
+    color: var(--orange);
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.project-card h3 {
+    color: var(--white);
+    font-size: 1.6em;
+    margin: 8px 0;
+}
+
+.project-card p {
+    color: var(--gray);
+}
+
+.tags {
+    margin: 18px 0;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--bg);
+    color: var(--gray);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 5px 11px;
+    margin: 4px 4px 4px 0;
+    font-size: 0.82em;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: var(--orange);
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-link:hover {
+    background: var(--white);
+}
+
+/* BOTÓN PDF */
+
+.pdf-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: transparent;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.pdf-button:hover {
+    background: var(--orange);
+    color: #111;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+    color: var(--gray);
+}
+
+footer strong {
+    color: var(--orange);
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>Bienvenid@ a mi portafolio</h1>
-<p>Soy Gary Avila, futuro Tecnólogo Superior en Infraestructura de Redes y Ciberseguridad</p>
+
+    <h1>Gary <span>Avila</span></h1>
+
+    <p>
+        Diseño gráfico · Ilustración · Identidad visual
+    </p>
+
 </header>
+
+
+<div class="nav">
+
+    <a href="#sobre-mi">Sobre mí</a>
+
+    <a href="#habilidades">Habilidades</a>
+
+    <a href="#proyectos">Proyectos</a>
+
+    <a href="PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank">
+        Portafolio PDF
+    </a>
+
+    <a href="../index.html">
+        Redes y Ciberseguridad
+    </a>
+
+</div>
+
+
 <div class="container">
-<h2 class="section-title">Sobre Mí</h2>
-<p class="justify-text">Poseo una experiencia laboral amplia, pasé desde centros de contacto (call centers) hasta trabajar de mesero en restaurantes. Honestamente, siempre busqué algo que tenga impacto en mi vida y creo que esta carrera que estoy cursando actualmente es una de las oportunidades más importantes que he tenido. Aprendí muchas cosas en este tiempo de estudio; los trabajos que muestro aquí son una pequeña muestra de lo que puedo lograr con buenos mentores y comunicación efectiva. Espero que les gusten mis trabajos.</p>
 
-<h2 class="section-title">Casos de Estudio Técnicos</h2>
 
-<div class="project-card">
-    <h3>1. Diseño e Implementación de Red WAN Escalable con Enrutamiento OSPF y Políticas de QoS</h3>
-    <p class="justify-text">Modelado de una infraestructura WAN escalable corporativa tipo Hub-and-Spoke. Aplicación de ingeniería de direccionamiento sin clase mediante VLSM con bloques /29 para segmentos LAN y /30 para enlaces seriales punto a punto. Configuración y convergencia dinámica de rutas mediante el protocolo OSPF en Área 0. Despliegue de políticas de Calidad de Servicio mediante la arquitectura modular MQC para mitigar la congestión perimetral, garantizando una cola de prioridad estricta absoluta (LLQ) del 30% para flujos de videollamadas en tiempo real y una reserva basada en clases (CBWFQ) del 20% para el tráfico del sistema transaccional ERP.</p>
-    <div class="tags">
-        <span class="tag">Cisco IOS</span>
-        <span class="tag">OSPF Dynamic Routing</span>
-        <span class="tag">QoS (MQC Frame)</span>
-        <span class="tag">VLSM Addressing</span>
+<!-- SOBRE MÍ -->
+
+<section id="sobre-mi">
+
+<h2 class="section-title">Sobre mí</h2>
+
+<p class="about">
+
+Diseñador gráfico autodidacta con especial interés en ilustración,
+identidad visual y construcción de conceptos gráficos. Mi punto de
+partida es la ilustración vectorial, área en la que he desarrollado
+mayor experiencia y que utilizo como base para explorar branding,
+personajes, composición y sistemas visuales.
+
+</p>
+
+<p class="about">
+
+Me interesa que una pieza no solo se vea bien, sino que tenga una
+razón detrás. Disfruto transformar ideas, referencias e historias en
+recursos visuales que puedan construir una identidad reconocible.
+
+</p>
+
+</section>
+
+
+<!-- HABILIDADES -->
+
+<section id="habilidades">
+
+<h2 class="section-title">Áreas de trabajo</h2>
+
+<div class="skills">
+
+    <div class="skill-card">
+        <h3>Ilustración</h3>
+        <p>
+            Ilustración vectorial, retrato, diseño de personajes,
+            line art y estilización.
+        </p>
     </div>
-    <a href="Caso Técnico - Diseño e Implementación de Red WAN, OSPF y QoS Modificable.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
+
+    <div class="skill-card">
+        <h3>Identidad visual</h3>
+        <p>
+            Conceptualización, logotipo, paleta cromática,
+            tipografía y sistemas gráficos.
+        </p>
+    </div>
+
+    <div class="skill-card">
+        <h3>Diseño gráfico</h3>
+        <p>
+            Composición, jerarquía visual, diseño editorial
+            y piezas promocionales.
+        </p>
+    </div>
+
+    <div class="skill-card">
+        <h3>Herramientas</h3>
+        <p>
+            Adobe Illustrator, Adobe Photoshop,
+            herramientas de exploración visual con IA y Filmora.
+        </p>
+    </div>
+
 </div>
 
-<div class="project-card">
-    <h3>2. Implementación de NIDS Snort y Análisis de Tráfico Perimetral</h3>
-    <p class="justify-text">Despliegue perimetral y optimización del Sistema de Detección de Intrusos (NIDS) de código abierto Snort en una instancia Linux Ubuntu Server. Configuración técnica del adaptador de red virtual al estado promiscuo absoluto en la Capa 2 para evadir el filtrado por hardware del conmutador y capturar el flujo promiscuo circulante. Codificación granular y depuración sintáctica del fichero de firmas local para la monitorización e interceptación en tiempo real de solicitudes ICMP, accesos de socket HTTP (Puerto 80), sesiones SSH (Puerto 22) y anomalías estructurales avanzadas por inyección de flags TCP FIN, PSH y URG simultáneos (Escaneos tácticos Nmap XMAS).</p>
-    <div class="tags">
-        <span class="tag">Snort NIDS</span>
-        <span class="tag">Ubuntu Server</span>
-        <span class="tag">Modo Promiscuo (Capa 2)</span>
-        <span class="tag">Deep Packet Inspection</span>
-    </div>
-    <a href="Configuración y Despliegue de Snort NIDS.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
-</div>
+</section>
+
+
+<!-- PROYECTOS -->
+
+<section id="proyectos">
+
+<h2 class="section-title">Proyectos seleccionados</h2>
+
+
+<!-- SENTIO -->
 
 <div class="project-card">
-    <h3>3. Análisis Dinámico de Malware y Mecanismos de Persistencia del Ransomware WannaCry</h3>
-    <p class="justify-text">Estudio procedimental dinámico y forense del comportamiento e impacto operacional de la muestra histórica destructiva de WannaCry dentro de una arquitectura hermética de contención (Sandbox). Implementación de directivas estrictas de aislamiento de invitados en el hipervisor VMware desactivando canales de comunicación compartida y portapapeles lógicos. Configuración de direccionamiento estático e intercepción de red mediante la emulación pasiva de servicios globales de Internet con la suite INetSim sobre REMnux. Análisis detallado de los indicadores de compromiso (IoC) ejecutados en el endpoint víctima (Flare-VM Windows), catalogando la inyección de sub-binarios, la mutación asimétrica de archivos a extensión .WNCRY y la alteración de descriptores de seguridad críticos.</p>
-    <div class="tags">
-        <span class="tag">Malware Sandboxing</span>
-        <span class="tag">INetSim Simulation</span>
-        <span class="tag">Flare-VM / REMnux</span>
-        <span class="tag">Indicators of Compromise (IoC)</span>
+
+    <div class="project-number">
+        01 · BRANDING
     </div>
-    <a href="Análisis Dinámico de Malware - Ejecución de WannaCry.pdf" class="download-link" download>📥 Descargar Caso de Estudio (PDF)</a>
+
+    <h3>SENTIO</h3>
+
+    <p>
+        Identidad visual, sistema gráfico y diseño de personaje
+        desarrollado alrededor de una marca personal y su concepto
+        de crecimiento creativo.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Branding</span>
+        <span class="tag">Identidad visual</span>
+        <span class="tag">Diseño de personaje</span>
+        <span class="tag">Sistema gráfico</span>
+        <span class="tag">Illustrator</span>
+    </div>
+
 </div>
 
+
+<!-- RUBI -->
+
 <div class="project-card">
-    <h3>4. Dimensionamiento de Capacidad y Arquitectura de Tráfico Inalámbrico (WLAN)</h3>
-    <p class="justify-text">Aplicación de una metodología métrica de ingeniería de tráfico para la planificación de capacidad y ancho de banda en infraestructuras operativas con perfiles asimétricos. Modelado de carga y cálculo de concurrencia/sobresuscripción técnica para entornos de logística industrial (lectores móviles y CCTV bajo Wi-Fi 6 IEEE 802.11ax con optimización OFDMA/TWT) y agencias bancarias corporativas. Estructuración granular de segmentación lógica robusta mediante el estándar 802.1Q (VLANs dedicadas para ATMs, Operaciones y redes Guest) para mitigar vectores de movemento lateral y dar cumplimiento a regulaciones financieras internacionales.</p>
-    <div class="tags">
-        <span class="tag">WLAN Capacity Planning</span>
-        <span class="tag">Wi-Fi 6 (802.11ax)</span>
-        <span class="tag">Traffic Engineering</span>
-        <span class="tag">802.1Q Network Isolation</span>
+
+    <div class="project-number">
+        02 · DIRECCIÓN DE ARTE
     </div>
+
+    <h3>PROJECT RUBI</h3>
+
+    <p>
+        Ejercicio conceptual de dirección de arte basado en una
+        interpretación personal de la voz y trayectoria de la artista
+        Rubí. La propuesta desarrolla un universo visual para un
+        álbum ficticio mediante portada, vinilo, afiches y
+        merchandising textil.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Dirección de arte</span>
+        <span class="tag">Diseño editorial</span>
+        <span class="tag">Merchandising</span>
+        <span class="tag">Illustrator</span>
+        <span class="tag">Photoshop</span>
+    </div>
+
+</div>
+
+
+<!-- ARMOR FAITH -->
+
+<div class="project-card">
+
+    <div class="project-number">
+        03 · DISEÑO EDITORIAL
+    </div>
+
+    <h3>ARMOR-FAITH</h3>
+
+    <p>
+        Pieza conmemorativa desarrollada como separador de libros
+        para un evento internacional. El proyecto combina
+        ilustración, composición tipográfica, concepto visual y
+        preparación para impresión.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Diseño editorial</span>
+        <span class="tag">Papelería</span>
+        <span class="tag">Ilustración</span>
+        <span class="tag">Preprensa</span>
+    </div>
+
+</div>
+
+
+<!-- ILUSTRACIÓN -->
+
+<div class="project-card">
+
+    <div class="project-number">
+        04 · ILUSTRACIÓN
+    </div>
+
+    <h3>Retratos & Fan-Art</h3>
+
+    <p>
+        Selección de exploraciones visuales desarrolladas durante
+        distintas etapas de formación en ilustración vectorial.
+        Incluye retratos, personajes y reinterpretaciones inspiradas
+        en la cultura mecha y la ciencia ficción.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Ilustración vectorial</span>
+        <span class="tag">Retrato</span>
+        <span class="tag">Fan-Art</span>
+        <span class="tag">Line Art</span>
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- PDF -->
+
+<section>
+
+<h2 class="section-title">Portafolio completo</h2>
+
+<p class="about">
+
+Puedes consultar el archivo completo del portafolio para conocer
+el proceso, contexto y desarrollo visual de cada proyecto.
+
+</p>
+
+<a
+    href="PORTAFOLIO_GD_AVILA_GARY.pdf"
+    target="_blank"
+    class="pdf-button">
+
+    📖 Ver portafolio completo
+
+</a>
+
+</section>
+
+
+</div>
+
+
+<footer>
+
+    <p>
+        <strong>Gary Avila</strong><br>
+        Diseño gráfico · Ilustración
+    </p>
+
+    <p>
+        📧 metal4512@gmail.com
+        <br>
+        📱 +593 98 110 1051
+    </p>
+
+    <p>
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            style="color:#ff6b00; text-decoration:none;">
+
+            LinkedIn
+
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
