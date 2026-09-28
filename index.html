@@ -311,6 +311,7 @@ nav a:hover {
     border-radius: 5px;
     margin-top: 15px;
     margin-right: 10px;
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 
@@ -451,7 +452,7 @@ footer a:hover {
                 <span class="tag tag-tech">QoS (MQC)</span>
                 <span class="tag tag-tech">VLSM</span>
             </div>
-            <a href="Caso Técnico - Diseño e Implementación de Red WAN, OSPF y QoS Modificable.pdf" class="btn-action btn-blue" download>Descargar Caso de Estudio (PDF)</a>
+            <a href="Caso Técnico - Diseño e Implementación de Red WAN, OSPF y QoS Modificable.pdf" class="btn-action btn-blue" onclick="descargarArchivo(event, this.href, 'Caso_Tecnico_WAN_OSPF_QoS.pdf')">Descargar Caso de Estudio (PDF)</a>
         </article>
 
         <!-- Caso 2 -->
@@ -467,7 +468,7 @@ footer a:hover {
                 <span class="tag tag-tech">Modo Promiscuo</span>
                 <span class="tag tag-tech">Deep Packet Inspection</span>
             </div>
-            <a href="Configuración y Despliegue de Snort NIDS.pdf" class="btn-action btn-blue" download>Descargar Caso de Estudio (PDF)</a>
+            <a href="Configuración y Despliegue de Snort NIDS.pdf" class="btn-action btn-blue" onclick="descargarArchivo(event, this.href, 'Despliegue_Snort_NIDS.pdf')">Descargar Caso de Estudio (PDF)</a>
         </article>
 
         <!-- Caso 3 -->
@@ -483,7 +484,7 @@ footer a:hover {
                 <span class="tag tag-tech">Flare-VM / REMnux</span>
                 <span class="tag tag-tech">Indicadores de Compromiso</span>
             </div>
-            <a href="Análisis Dinámico de Malware - Ejecución de WannaCry.pdf" class="btn-action btn-blue" download>Descargar Caso de Estudio (PDF)</a>
+            <a href="Análisis Dinámico de Malware - Ejecución de WannaCry.pdf" class="btn-action btn-blue" onclick="descargarArchivo(event, this.href, 'Analisis_Malware_WannaCry.pdf')">Descargar Caso de Estudio (PDF)</a>
         </article>
 
         <!-- Caso 4 -->
@@ -587,11 +588,16 @@ footer a:hover {
                 Hoja de vida estructurada bajo el formato estándar de Harvard, que sintetiza mi formación académica en infraestructura y ciberseguridad, certificaciones técnicas, historial laboral multidisciplinario y áreas de especialización en diseño gráfico.
             </p>
             <div>
-                <!-- Enlace de descarga directa local del archivo subido a la raíz de tu repositorio -->
-                <a href="CV_AVILA_GARY.pdf" download="CV_AVILA_GARY.pdf"  class="btn-action btn-blue">
+                <!-- Botón con descarga forzada instantánea -->
+                <a href="CV_AVILA_GARY.pdf" 
+                   onclick="descargarArchivo(event, this.href, 'CV_Gary_Avila.pdf')" 
+                   class="btn-action btn-blue">
                     Descargar Curriculum Vitae (PDF)
                 </a>
-                <a href="https://github.com/Kirassound/Kirassound.github.io/blob/main/CV_AVILA_GARY.pdf" target="_blank" rel="noopener noreferrer" class="btn-action btn-outline-white">
+                <a href="CV_AVILA_GARY.pdf" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-action btn-outline-white">
                     Visualizar en Navegador
                 </a>
             </div>
@@ -612,6 +618,32 @@ footer a:hover {
         <a href="https://www.linkedin.com/in/gary-avila-3ba741252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
 </footer>
+
+<script>
+function descargarArchivo(event, url, nombreDescarga) {
+    event.preventDefault();
+    fetch(url)
+        .then(response => {
+            if (!response.ok) throw new Error('Error en la descarga');
+            return response.blob();
+        })
+        .then(blob => {
+            const enlaceBlob = window.URL.createObjectURL(blob);
+            const elementoA = document.createElement('a');
+            elementoA.style.display = 'none';
+            elementoA.href = enlaceBlob;
+            elementoA.download = nombreDescarga;
+            document.body.appendChild(elementoA);
+            elementoA.click();
+            window.URL.revokeObjectURL(enlaceBlob);
+            elementoA.remove();
+        })
+        .catch(() => {
+            // En caso de bloqueo local de pruebas, realiza la navegación directa
+            window.location.href = url;
+        });
+}
+</script>
 
 </body>
 </html>
