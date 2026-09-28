@@ -3,21 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gary Avila | Redes, Ciberseguridad & Diseño Gráfico</title>
+<title>Gary Avila | Infraestructura de Redes, Ciberseguridad &amp; Diseño Gráfico</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    /* Paleta basada en tus códigos HEX */
-    --c-blue: #1560bd;       /* Azul técnico */
-    --c-orange: #ffa039;     /* Naranja principal de acento */
-    --c-white: #ececea;      /* Blanco roto para textos */
-    --c-gray-border: #444244;/* Gris medio para bordes */
-    
-    /* Escala oscura complementaria derivada del gris base */
-    --bg-main: #181719;      /* Fondo principal */
-    --bg-card: #232124;      /* Fondo de tarjetas y header */
-    --bg-card-hover: #2a282c;/* Hover sutil */
-    --text-muted: #b0adb3;   /* Texto secundario / descripciones */
+    /* Gradaciones Azul (Ciberseguridad & Redes) */
+    --blue-accent: #2b7fff;
+    --blue-border: #1e3a8a;
+    --blue-surface: #0e1726;
+
+    /* Gradaciones Morado (Diseño Gráfico) */
+    --purple-accent: #a855f7;
+    --purple-border: #581c87;
+    --purple-surface: #180e29;
+
+    /* Base Neutra y Superficies */
+    --bg-gradient: linear-gradient(135deg, #0d131f 0%, #12101a 50%, #160f21 100%);
+    --card-bg: rgba(22, 23, 31, 0.75);
+    --border-neutral: #282a36;
+    --text-primary: #f1f3f9;
+    --text-secondary: #9aa1b2;
+    --text-detail: #767d8f;
+
+    /* Tipografía Unificada */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --fw-bold: 700;
+    --fw-normal: 400;
+    --fw-light: 300;
 }
 
 * {
@@ -25,87 +41,102 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: var(--bg-main);
-    color: var(--c-white);
+    font-family: var(--font-family);
+    font-weight: var(--fw-normal);
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
     margin: 0;
     line-height: 1.65;
 }
 
 /* HEADER */
 header {
-    background: var(--bg-card);
-    padding: 70px 20px;
+    background: rgba(13, 16, 26, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 75px 20px 65px;
     text-align: center;
-    border-bottom: 2px solid var(--c-gray-border);
+    border-bottom: 1px solid var(--border-neutral);
 }
 
 header h1 {
-    margin: 0;
     font-size: 2.8em;
-    font-weight: 800;
-    color: var(--c-white);
+    font-weight: var(--fw-bold);
+    margin: 0;
+    letter-spacing: -0.5px;
 }
 
 header h1 span {
-    color: var(--c-orange);
+    color: var(--blue-accent);
 }
 
 header p {
-    color: var(--text-muted);
-    font-size: 1.2em;
-    margin: 15px auto 0;
+    color: var(--text-secondary);
+    font-size: 1.15em;
+    font-weight: var(--fw-light);
+    margin: 14px auto 0;
     max-width: 800px;
 }
 
 /* NAVEGACIÓN */
-.nav {
+nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(24, 23, 25, 0.95);
-    backdrop-filter: blur(8px);
+    background: rgba(10, 12, 19, 0.92);
+    backdrop-filter: blur(10px);
     text-align: center;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--c-gray-border);
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-neutral);
 }
 
-.nav a {
-    color: var(--c-white);
+nav a {
+    color: var(--text-secondary);
     text-decoration: none;
-    margin: 0 12px;
-    font-size: 0.95em;
-    font-weight: 600;
+    margin: 0 14px;
+    font-size: 0.92em;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.3px;
     transition: color 0.2s ease;
 }
 
-.nav a:hover {
-    color: var(--c-orange);
+nav a:hover {
+    color: var(--blue-accent);
 }
 
 /* CONTENEDOR */
 .container {
-    max-width: 1000px;
+    max-width: 960px;
     margin: 50px auto;
     padding: 0 20px;
 }
 
-/* TÍTULOS DE SECCIÓN */
+/* TÍTULOS Y SECCIONES */
 .section-title {
-    color: var(--c-orange);
-    font-size: 1.8em;
-    border-bottom: 1px solid var(--c-gray-border);
-    padding-bottom: 12px;
-    margin-top: 60px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 1.7em;
+    font-weight: var(--fw-bold);
+    padding-bottom: 10px;
+    margin-top: 65px;
+    margin-bottom: 8px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.title-blue {
+    color: var(--blue-accent);
+    border-bottom-color: var(--blue-accent);
+}
+
+.title-purple {
+    color: var(--purple-accent);
+    border-bottom-color: var(--purple-accent);
 }
 
 .section-desc {
-    color: var(--text-muted);
-    font-size: 1.05em;
+    color: var(--text-detail);
+    font-size: 0.98em;
+    font-weight: var(--fw-light);
+    margin-top: 4px;
     margin-bottom: 30px;
 }
 
@@ -115,25 +146,34 @@ header p {
 
 /* SOBRE MÍ */
 .about-box {
-    background: var(--bg-card);
-    border: 1px solid var(--c-gray-border);
-    border-radius: 10px;
-    padding: 25px 30px;
-    color: var(--c-white);
+    background: var(--card-bg);
+    border: 1px solid var(--border-neutral);
+    border-radius: 8px;
+    padding: 28px 32px;
+    color: var(--text-secondary);
+    font-weight: var(--fw-normal);
     line-height: 1.8;
 }
 
-/* HABILIDADES / SERVICIOS */
-.skills {
+.about-box p {
+    margin: 0 0 16px 0;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* RETÍCULA DE HABILIDADES */
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
+    gap: 20px;
     margin-top: 25px;
 }
 
 .skill-card {
-    background: var(--bg-card);
-    border: 1px solid var(--c-gray-border);
+    background: var(--card-bg);
+    border: 1px solid var(--border-neutral);
     border-radius: 8px;
     padding: 22px;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -141,62 +181,90 @@ header p {
 
 .skill-card:hover {
     transform: translateY(-3px);
-    border-color: var(--c-orange);
 }
 
 .skill-card h3 {
-    color: var(--c-orange);
-    margin-top: 0;
-    font-size: 1.25em;
+    margin: 0 0 10px 0;
+    font-size: 1.15em;
+    font-weight: var(--fw-bold);
+}
+
+.skill-tech h3 {
+    color: var(--blue-accent);
+}
+
+.skill-tech:hover {
+    border-color: var(--blue-accent);
+}
+
+.skill-design h3 {
+    color: var(--purple-accent);
+}
+
+.skill-design:hover {
+    border-color: var(--purple-accent);
 }
 
 .skill-card p {
-    color: var(--text-muted);
-    margin-bottom: 0;
-    font-size: 0.95em;
+    color: var(--text-secondary);
+    font-size: 0.92em;
+    font-weight: var(--fw-light);
+    margin: 0;
+    line-height: 1.6;
 }
 
 /* TARJETAS DE PROYECTOS */
 .project-card {
-    background: var(--bg-card);
-    border: 1px solid var(--c-gray-border);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-neutral);
+    border-radius: 8px;
     padding: 28px;
     margin: 25px 0;
-    transition: all 0.25s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--c-orange);
-    box-shadow: 0 10px 25px rgba(255, 160, 57, 0.12);
+    transform: translateY(-3px);
+}
+
+.card-cyber:hover {
+    border-color: var(--blue-border);
+    box-shadow: 0 8px 24px rgba(43, 127, 255, 0.08);
+}
+
+.card-design:hover {
+    border-color: var(--purple-border);
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.08);
 }
 
 .project-meta {
-    font-size: 0.85em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    font-size: 0.8em;
+    font-weight: var(--fw-light);
+    letter-spacing: 1.2px;
     text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
 .meta-cyber {
-    color: var(--c-blue);
+    color: var(--blue-accent);
 }
 
 .meta-design {
-    color: var(--c-orange);
+    color: var(--purple-accent);
 }
 
 .project-card h3 {
-    color: var(--c-white);
-    font-size: 1.5em;
-    margin: 6px 0 14px 0;
+    font-size: 1.4em;
+    font-weight: var(--fw-bold);
+    margin: 4px 0 14px 0;
+    color: var(--text-primary);
 }
 
 .project-card p {
-    color: var(--text-muted);
+    color: var(--text-secondary);
+    font-weight: var(--fw-normal);
     margin: 0;
+    font-size: 0.96em;
 }
 
 /* TAGS */
@@ -208,57 +276,59 @@ header p {
 }
 
 .tag {
-    background: var(--bg-main);
-    color: var(--c-white);
-    border: 1px solid var(--c-gray-border);
-    border-radius: 20px;
-    padding: 5px 12px;
-    font-size: 0.82em;
-    font-weight: 500;
+    background: rgba(13, 16, 26, 0.6);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-neutral);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: var(--fw-light);
+    letter-spacing: 0.3px;
 }
 
 .tag-tech {
-    border-color: rgba(21, 96, 189, 0.5);
+    border-color: rgba(43, 127, 255, 0.3);
 }
 
-/* BOTONES Y ENLACES */
+.tag-design {
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* BOTONES Y ENLACES DE ACCIÓN */
 .btn-action {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-    padding: 10px 18px;
-    font-weight: 700;
+    display: inline-block;
+    font-family: var(--font-family);
+    font-weight: var(--fw-bold);
+    font-size: 0.88em;
+    letter-spacing: 0.3px;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.9em;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-top: 15px;
     transition: all 0.2s ease;
 }
 
-/* Botón estilo redes (Azul a Naranja) */
 .btn-blue {
     background: transparent;
-    border: 1px solid var(--c-blue);
-    color: var(--c-white);
+    border: 1px solid var(--blue-accent);
+    color: var(--blue-accent);
 }
 
 .btn-blue:hover {
-    background: var(--c-blue);
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(21, 96, 189, 0.3);
+    background: var(--blue-accent);
+    color: #ffffff;
 }
 
-/* Botón estilo diseño (Naranja) */
-.btn-orange {
-    background: var(--c-orange);
-    color: #111;
-    border: 1px solid var(--c-orange);
+.btn-purple {
+    background: var(--purple-accent);
+    border: 1px solid var(--purple-accent);
+    color: #0d0614;
 }
 
-.btn-orange:hover {
-    background: var(--c-white);
-    border-color: var(--c-white);
-    color: #111;
+.btn-purple:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #0d0614;
 }
 
 /* FOOTER */
@@ -266,20 +336,23 @@ footer {
     text-align: center;
     padding: 60px 20px;
     margin-top: 90px;
-    border-top: 1px solid var(--c-gray-border);
-    background: var(--bg-card);
-    color: var(--text-muted);
+    border-top: 1px solid var(--border-neutral);
+    background: rgba(10, 11, 18, 0.95);
+    color: var(--text-detail);
+    font-size: 0.92em;
+    font-weight: var(--fw-light);
 }
 
 footer strong {
-    color: var(--c-orange);
-    font-size: 1.1em;
+    color: var(--text-primary);
+    font-weight: var(--fw-bold);
+    font-size: 1.05em;
 }
 
 footer a {
-    color: var(--c-orange);
+    color: var(--blue-accent);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
 }
 
 footer a:hover {
@@ -292,218 +365,213 @@ footer a:hover {
 
 <header>
     <h1>Gary <span>Avila</span></h1>
-    <p>Infraestructura de Redes & Ciberseguridad · Diseño Gráfico e Ilustración</p>
+    <p>Infraestructura de Redes, Ciberseguridad e Identidad Visual</p>
 </header>
 
-<div class="nav">
+<nav aria-label="Navegación principal">
     <a href="#sobre-mi">Sobre Mí</a>
     <a href="#habilidades">Habilidades</a>
-    <a href="#ciberseguridad">Redes & Ciberseguridad</a>
+    <a href="#ciberseguridad">Ciberseguridad</a>
     <a href="#diseno">Diseño Gráfico</a>
-    <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank">📄 Portafolio PDF</a>
-</div>
+    <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank">Portafolio PDF</a>
+</nav>
 
-<div class="container">
+<main class="container">
 
     <!-- SOBRE MÍ -->
     <section id="sobre-mi">
-        <h2 class="section-title">Sobre Mí</h2>
+        <h2 class="section-title title-blue">Sobre Mí</h2>
         <div class="about-box justify-text">
-            <p style="margin-top: 0;">
-                Poseo una experiencia laboral amplia, pasé desde centros de contacto (call centers) hasta trabajar de mesero en restaurantes. Siempre busqué algo que tenga impacto genuino en mi vida y encontré en la tecnología y el arte visual mis mayores fortalezas.
+            <p>
+                Poseo una trayectoria formativa y laboral multidisciplinaria que abarca desde la atención al cliente hasta la gestión operativa. Esta versatilidad forjó mi adaptabilidad, comunicación metódica y disciplina orientada al cumplimiento de objetivos técnicos.
             </p>
-            <p style="margin-bottom: 0;">
-                Actualmente curso la carrera de Infraestructura de Redes y Ciberseguridad, complementándola con mi perfil como diseñador gráfico autodidacta e ilustrador vectorial. Me apasiona tanto la arquitectura lógica de sistemas seguros como la construcción de universos visuales con propósito e identidad.
+            <p>
+                Actualmente curso la carrera de Infraestructura de Redes y Ciberseguridad, disciplina que complemento activamente con mi perfil como diseñador gráfico autodidacta e ilustrador vectorial. Integro el rigor analítico de la administración de sistemas seguros con la conceptualización y desarrollo de sistemas visuales reconocibles.
             </p>
         </div>
     </section>
 
     <!-- HABILIDADES -->
     <section id="habilidades">
-        <h2 class="section-title">Áreas de Trabajo</h2>
-        <div class="skills">
-            <div class="skill-card">
-                <h3>Redes & Telecom</h3>
-                <p>Enrutamiento dinámico OSPF, arquitectura WAN, VLANs 802.1Q, ingeniería VLSM y dimensionamiento WLAN Wi-Fi 6.</p>
+        <h2 class="section-title title-purple">Áreas de Especialización</h2>
+        <div class="skills-grid">
+            <div class="skill-card skill-tech">
+                <h3>Redes y Telecomunicaciones</h3>
+                <p>Enrutamiento dinámico OSPF, arquitectura WAN, VLANs 802.1Q, ingeniería de direccionamiento VLSM y dimensionamiento WLAN Wi-Fi 6.</p>
             </div>
-            <div class="skill-card">
-                <h3>Ciberseguridad</h3>
-                <p>NIDS Snort, análisis de malware en Sandbox, inspección profunda de paquetes (DPI), monitoreo e indicadores de compromiso (IoC).</p>
+            <div class="skill-card skill-tech">
+                <h3>Ciberseguridad Defensiva</h3>
+                <p>Despliegue de NIDS Snort, análisis de malware en entornos Sandbox aislados, inspección profunda de paquetes e identificación de IoC.</p>
             </div>
-            <div class="skill-card">
-                <h3>Ilustración & Vector</h3>
-                <p>Ilustración vectorial avanzada en Illustrator, retrato, diseño de personajes, line art y estilo mecha / sci-fi.</p>
+            <div class="skill-card skill-design">
+                <h3>Ilustración Vectorial</h3>
+                <p>Dominio avanzado de Adobe Illustrator, construcción anatómica, retratos vectoriales, diseño de personajes y estilización temática.</p>
             </div>
-            <div class="skill-card">
-                <h3>Branding & Editorial</h3>
-                <p>Identidad visual completa, logotipos, paletas cromáticas, dirección de arte, merchandising y preparación para preprensa.</p>
+            <div class="skill-card skill-design">
+                <h3>Identidad Visual y Editorial</h3>
+                <p>Sistemas gráficos integrales, logotipos, diseño editorial, dirección de arte para indumentaria y preparación técnica para preprensa.</p>
             </div>
         </div>
     </section>
 
     <!-- CASOS DE REDES Y CIBERSEGURIDAD -->
     <section id="ciberseguridad">
-        <h2 class="section-title">Casos de Estudio: Redes y Ciberseguridad</h2>
-        <p class="section-desc">Despliegues prácticos de infraestructura, monitoreo defensivo y laboratorios forenses.</p>
+        <h2 class="section-title title-blue">Casos de Estudio: Redes y Ciberseguridad</h2>
+        <p class="section-desc">Implementaciones prácticas de infraestructura de red, defensa perimetral y análisis dinámico de amenazas.</p>
 
         <!-- Caso 1 -->
-        <div class="project-card">
-            <div class="project-meta meta-cyber">01 · Infraestructura WAN & QoS</div>
+        <article class="project-card card-cyber">
+            <div class="project-meta meta-cyber">01 &middot; Infraestructura WAN &amp; QoS</div>
             <h3>Diseño e Implementación de Red WAN Escalable con Enrutamiento OSPF y Políticas de QoS</h3>
             <p class="justify-text">
-                Modelado de una infraestructura WAN escalable corporativa tipo Hub-and-Spoke. Aplicación de ingeniería de direccionamiento sin clase mediante VLSM con bloques /29 para segmentos LAN y /30 para enlaces seriales punto a punto. Configuración y convergencia dinámica de rutas mediante el protocolo OSPF en Área 0. Despliegue de políticas de Calidad de Servicio mediante la arquitectura modular MQC para mitigar la congestión perimetral, garantizando una cola de prioridad estricta absoluta (LLQ) del 30% para flujos de videollamadas y una reserva basada en clases (CBWFQ) del 20% para el tráfico del sistema ERP.
+                Modelado de una infraestructura WAN corporativa Hub-and-Spoke. Aplicación de direccionamiento sin clase mediante VLSM con bloques /29 para segmentos LAN y /30 para enlaces seriales punto a punto. Configuración dinámica de rutas bajo OSPF en Área 0 y despliegue de políticas de Calidad de Servicio mediante el marco modular MQC, garantizando prioridad estricta absoluta (LLQ) del 30% para transmisiones de voz y video, y asignación por clases (CBWFQ) del 20% para el sistema ERP.
             </p>
             <div class="tags">
                 <span class="tag tag-tech">Cisco IOS</span>
                 <span class="tag tag-tech">OSPF Dynamic Routing</span>
-                <span class="tag tag-tech">QoS (MQC Frame)</span>
-                <span class="tag tag-tech">VLSM Addressing</span>
+                <span class="tag tag-tech">QoS (MQC)</span>
+                <span class="tag tag-tech">VLSM</span>
             </div>
-            <a href="Caso Técnico - Diseño e Implementación de Red WAN, OSPF y QoS Modificable.pdf" class="btn-action btn-blue" download>📥 Descargar Caso de Estudio (PDF)</a>
-        </div>
+            <a href="Caso Técnico - Diseño e Implementación de Red WAN, OSPF y QoS Modificable.pdf" class="btn-action btn-blue" download>Descargar Caso de Estudio (PDF)</a>
+        </article>
 
         <!-- Caso 2 -->
-        <div class="project-card">
-            <div class="project-meta meta-cyber">02 · Detección de Intrusos</div>
+        <article class="project-card card-cyber">
+            <div class="project-meta meta-cyber">02 &middot; Detección de Intrusos</div>
             <h3>Implementación de NIDS Snort y Análisis de Tráfico Perimetral</h3>
             <p class="justify-text">
-                Despliegue perimetral y optimización del Sistema de Detección de Intrusos (NIDS) Snort en Ubuntu Server. Configuración técnica del adaptador virtual a modo promiscuo absoluto en Capa 2 para capturar el tráfico del conmutador sin restricciones. Codificación granular y depuración sintáctica del fichero de firmas local para la detección de solicitudes ICMP, accesos HTTP, sesiones SSH y anomalías avanzadas por inyección de flags TCP simultáneas (Escaneos tácticos Nmap XMAS).
+                Despliegue perimetral y optimización de Snort sobre Ubuntu Server. Configuración técnica del adaptador de red en modo promiscuo de Capa 2 para monitorear el tráfico circulante. Creación y depuración sintáctica de firmas personalizadas para la interceptación en tiempo real de paquetes ICMP, accesos al socket HTTP, sesiones SSH y escaneos de reconocimiento táctico Nmap XMAS (flags FIN, PSH y URG simultáneos).
             </p>
             <div class="tags">
                 <span class="tag tag-tech">Snort NIDS</span>
                 <span class="tag tag-tech">Ubuntu Server</span>
-                <span class="tag tag-tech">Modo Promiscuo (Capa 2)</span>
+                <span class="tag tag-tech">Modo Promiscuo</span>
                 <span class="tag tag-tech">Deep Packet Inspection</span>
             </div>
-            <a href="Configuración y Despliegue de Snort NIDS.pdf" class="btn-action btn-blue" download>📥 Descargar Caso de Estudio (PDF)</a>
-        </div>
+            <a href="Configuración y Despliegue de Snort NIDS.pdf" class="btn-action btn-blue" download>Descargar Caso de Estudio (PDF)</a>
+        </article>
 
         <!-- Caso 3 -->
-        <div class="project-card">
-            <div class="project-meta meta-cyber">03 · Análisis Forense de Malware</div>
-            <h3>Análisis Dinámico de Malware y Persistencia de WannaCry</h3>
+        <article class="project-card card-cyber">
+            <div class="project-meta meta-cyber">03 &middot; Análisis Dinámico de Amenazas</div>
+            <h3>Análisis de Comportamiento y Persistencia de WannaCry</h3>
             <p class="justify-text">
-                Estudio forense procedimental de WannaCry en entorno de contención Sandbox hermético bajo VMware. Desactivación de canales compartidos y portapapeles lógicos para aislamiento estricto. Configuración de direccionamiento estático e interceptación pasiva simulando Internet con la suite INetSim en REMnux. Identificación y catálogo de indicadores de compromiso (IoC) en el endpoint víctima (Flare-VM Windows), mapeando inyección de sub-binarios, cifrado asimétrico a extensión .WNCRY y alteración de descriptores de seguridad.
+                Estudio forense de la muestra de ransomware WannaCry en un entorno de aislamiento controlado (VMware). Interrupción de canales de integración lógica y emulación pasiva de la infraestructura de Internet mediante INetSim en REMnux. Identificación y catálogo de indicadores de compromiso (IoC) en el endpoint Flare-VM, registrando la ejecución de binarios derivados, el cifrado de datos hacia la extensión .WNCRY y la modificación de descriptores de seguridad.
             </p>
             <div class="tags">
-                <span class="tag tag-tech">Malware Sandboxing</span>
-                <span class="tag tag-tech">INetSim Simulation</span>
+                <span class="tag tag-tech">Sandbox Isolation</span>
+                <span class="tag tag-tech">INetSim</span>
                 <span class="tag tag-tech">Flare-VM / REMnux</span>
-                <span class="tag tag-tech">Indicators of Compromise (IoC)</span>
+                <span class="tag tag-tech">Indicadores de Compromiso</span>
             </div>
-            <a href="Análisis Dinámico de Malware - Ejecución de WannaCry.pdf" class="btn-action btn-blue" download>📥 Descargar Caso de Estudio (PDF)</a>
-        </div>
+            <a href="Análisis Dinámico de Malware - Ejecución de WannaCry.pdf" class="btn-action btn-blue" download>Descargar Caso de Estudio (PDF)</a>
+        </article>
 
         <!-- Caso 4 -->
-        <div class="project-card">
-            <div class="project-meta meta-cyber">04 · Ingeniería de Tráfico</div>
-            <h3>Dimensionamiento de Capacidad y Arquitectura de Tráfico Inalámbrico (WLAN)</h3>
+        <article class="project-card card-cyber">
+            <div class="project-meta meta-cyber">04 &middot; Ingeniería de Tráfico Inalámbrico</div>
+            <h3>Dimensionamiento de Capacidad y Tráfico Inalámbrico (WLAN)</h3>
             <p class="justify-text">
-                Modelado y cálculo de concurrencia y sobresuscripción técnica para entornos de logística industrial (lectores móviles y CCTV bajo Wi-Fi 6 IEEE 802.11ax con optimización OFDMA/TWT) y agencias bancarias. Estructuración granular de segmentación lógica mediante VLANs 802.1Q (redes aisladas para ATMs, Operaciones y Guest), mitigando vectores de movimiento lateral y asegurando cumplimiento de estándares financieros.
+                Modelado métrico de concurrencia y sobre-suscripción para entornos industriales y agencias bancarias. Planificación técnica bajo el estándar Wi-Fi 6 (IEEE 802.11ax) y aislamiento de dominios de difusión mediante el estándar 802.1Q (VLANs dedicadas para cajeros automáticos, operaciones y red de invitados), previniendo desplazamientos laterales no autorizados.
             </p>
             <div class="tags">
-                <span class="tag tag-tech">WLAN Capacity Planning</span>
                 <span class="tag tag-tech">Wi-Fi 6 (802.11ax)</span>
-                <span class="tag tag-tech">Traffic Engineering</span>
-                <span class="tag tag-tech">802.1Q Network Isolation</span>
+                <span class="tag tag-tech">Planificación de Capacidad</span>
+                <span class="tag tag-tech">Segmentación 802.1Q</span>
+                <span class="tag tag-tech">VLAN</span>
             </div>
-        </div>
+        </article>
     </section>
 
     <!-- PROYECTOS DE DISEÑO GRÁFICO -->
     <section id="diseno">
-        <h2 class="section-title">Proyectos: Diseño Gráfico e Ilustración</h2>
-        <p class="section-desc">Identidad visual, ilustración vectorial, concepto gráfico y dirección de arte.</p>
+        <h2 class="section-title title-purple">Proyectos: Diseño Gráfico e Ilustración</h2>
+        <p class="section-desc">Identidad de marca, conceptualización visual, diseño editorial y producción gráfica.</p>
 
         <!-- SENTIO -->
-        <div class="project-card">
-            <div class="project-meta meta-design">01 · BRANDING</div>
+        <article class="project-card card-design">
+            <div class="project-meta meta-design">01 &middot; Branding e Identidad</div>
             <h3>SENTIO</h3>
             <p class="justify-text">
-                Identidad visual, sistema gráfico y diseño de personaje desarrollado alrededor de una marca personal y su concepto de crecimiento creativo.
+                Construcción integral de identidad visual, sistema tipográfico y desarrollo de personaje/mascota en torno al concepto de evolución creativa para un modelo de servicios a pequeñas y medianas empresas.
             </p>
             <div class="tags">
-                <span class="tag">Branding</span>
-                <span class="tag">Identidad visual</span>
-                <span class="tag">Diseño de personaje</span>
-                <span class="tag">Sistema gráfico</span>
-                <span class="tag">Illustrator</span>
+                <span class="tag tag-design">Branding</span>
+                <span class="tag tag-design">Identidad Visual</span>
+                <span class="tag tag-design">Diseño de Personaje</span>
+                <span class="tag tag-design">Adobe Illustrator</span>
             </div>
-        </div>
+        </article>
 
         <!-- RUBI -->
-        <div class="project-card">
-            <div class="project-meta meta-design">02 · DIRECCIÓN DE ARTE</div>
+        <article class="project-card card-design">
+            <div class="project-meta meta-design">02 &middot; Dirección de Arte</div>
             <h3>PROJECT RUBI</h3>
             <p class="justify-text">
-                Ejercicio conceptual de dirección de arte basado en una interpretación de la voz y trayectoria de la artista Rubí. Universo visual completo para un álbum ficticio mediante portada, vinilo, afiches y merchandising textil.
+                Dirección visual conceptual para lanzamiento musical estructurada a partir de la narrativa y trayectoria de la intérprete. Producción integral de portada, disco de vinilo, piezas de vía pública e indumentaria temática.
             </p>
             <div class="tags">
-                <span class="tag">Dirección de arte</span>
-                <span class="tag">Diseño editorial</span>
-                <span class="tag">Merchandising</span>
-                <span class="tag">Illustrator</span>
-                <span class="tag">Photoshop</span>
+                <span class="tag tag-design">Dirección de Arte</span>
+                <span class="tag tag-design">Diseño Editorial</span>
+                <span class="tag tag-design">Merchandising</span>
+                <span class="tag tag-design">Photoshop</span>
             </div>
-        </div>
+        </article>
 
         <!-- ARMOR FAITH -->
-        <div class="project-card">
-            <div class="project-meta meta-design">03 · DISEÑO EDITORIAL</div>
+        <article class="project-card card-design">
+            <div class="project-meta meta-design">03 &middot; Diseño Editorial</div>
             <h3>ARMOR-FAITH</h3>
             <p class="justify-text">
-                Pieza conmemorativa desarrollada como separador de libros para evento internacional. Combina ilustración de alto detalle, composición tipográfica, concepto visual y preparación técnica para preprensa.
+                Pieza editorial conmemorativa en formato compacto inspirada en armaduras clásicas. Proceso de vectorización detallada, composición tipográfica y normalización técnica para procesos de preprensa y acabado físico.
             </p>
             <div class="tags">
-                <span class="tag">Diseño editorial</span>
-                <span class="tag">Papelería</span>
-                <span class="tag">Ilustración</span>
-                <span class="tag">Preprensa</span>
+                <span class="tag tag-design">Diseño Editorial</span>
+                <span class="tag tag-design">Ilustración Vectorial</span>
+                <span class="tag tag-design">Preprensa</span>
             </div>
-        </div>
+        </article>
 
         <!-- ILUSTRACIÓN -->
-        <div class="project-card">
-            <div class="project-meta meta-design">04 · ILUSTRACIÓN</div>
-            <h3>Retratos & Fan-Art</h3>
+        <article class="project-card card-design">
+            <div class="project-meta meta-design">04 &middot; Exploración Visual</div>
+            <h3>Retratos y Fan-Art</h3>
             <p class="justify-text">
-                Selección de exploraciones visuales en ilustración vectorial. Comprende retratos, personajes y reinterpretaciones estilizadas con marcada influencia de la cultura mecha y la ciencia ficción.
+                Serie de ejercicios técnicos de ilustración vectorial basados en anatomía, simplificación formal, tratamiento de tintas y reinterpretación conceptual de la temática mecha y de ciencia ficción.
             </p>
             <div class="tags">
-                <span class="tag">Ilustración vectorial</span>
-                <span class="tag">Retrato</span>
-                <span class="tag">Fan-Art</span>
-                <span class="tag">Line Art</span>
+                <span class="tag tag-design">Line Art</span>
+                <span class="tag tag-design">Retrato Vectorial</span>
+                <span class="tag tag-design">Sci-Fi</span>
             </div>
-        </div>
+        </article>
     </section>
 
     <!-- PORTAFOLIO COMPLETO PDF -->
     <section>
-        <h2 class="section-title">Portafolio Gráfico Completo</h2>
+        <h2 class="section-title title-purple">Portafolio Gráfico Completo</h2>
         <div class="about-box">
-            <p style="margin-top: 0;">
-                Puedes consultar el documento editorial completo para revisar los procesos de bocetaje, paletas, wireframes y el desarrollo visual detallado de cada pieza gráfica.
+            <p>
+                El archivo editorial completo contiene el desglose visual exhaustivo, retículas, alternativas cromáticas y los bocetos preparatorios correspondientes a cada propuesta gráfica.
             </p>
-            <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf"_blank" class="btn-action btn-orange">
-                📖 Ver Portafolio Gráfico Completo (PDF)
+            <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank" rel="noopener noreferrer" class="btn-action btn-purple">
+                Ver Portafolio Gráfico Completo (PDF)
             </a>
         </div>
     </section>
 
-</div>
+</main>
 
 <footer>
     <p>
         <strong>Gary Avila</strong><br>
-        Infraestructura de Redes · Ciberseguridad · Diseño Gráfico
+        Infraestructura de Redes &middot; Ciberseguridad &middot; Diseño Gráfico
     </p>
     <p>
-        📧 metal4512@gmail.com<br>
-        📱 +593 98 110 1051
+        metal4512@gmail.com &bull; +593 98 110 1051
     </p>
     <p>
-        <a href="https://www.linkedin.com/in/gary-avila-3ba741252/details/education/"_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/gary-avila-3ba741252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
 </footer>
 
