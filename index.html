@@ -93,7 +93,7 @@ nav {
 nav a {
     color: var(--text-secondary);
     text-decoration: none;
-    margin: 0 14px;
+    margin: 0 12px;
     font-size: 0.92em;
     font-weight: var(--fw-bold);
     letter-spacing: 0.3px;
@@ -132,6 +132,11 @@ nav a:hover {
     border-bottom-color: var(--purple-accent);
 }
 
+.title-neutral {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-neutral);
+}
+
 .section-desc {
     color: var(--text-detail);
     font-size: 0.98em;
@@ -144,7 +149,7 @@ nav a:hover {
     text-align: justify;
 }
 
-/* SOBRE MÍ */
+/* CAJAS INFORMATIVAS / SOBRE MÍ */
 .about-box {
     background: var(--card-bg);
     border: 1px solid var(--border-neutral);
@@ -305,6 +310,7 @@ nav a:hover {
     padding: 10px 18px;
     border-radius: 5px;
     margin-top: 15px;
+    margin-right: 10px;
     transition: all 0.2s ease;
 }
 
@@ -328,6 +334,18 @@ nav a:hover {
 .btn-purple:hover {
     background: #ffffff;
     border-color: #ffffff;
+    color: #0d0614;
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.btn-outline-white:hover {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
     color: #0d0614;
 }
 
@@ -373,7 +391,8 @@ footer a:hover {
     <a href="#habilidades">Habilidades</a>
     <a href="#ciberseguridad">Ciberseguridad</a>
     <a href="#diseno">Diseño Gráfico</a>
-    <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank">Portafolio PDF</a>
+    <a href="#curriculum">Curriculum Vitae</a>
+    <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank" rel="noopener noreferrer">Portafolio PDF</a>
 </nav>
 
 <main class="container">
@@ -557,6 +576,25 @@ footer a:hover {
             <a href="https://github.com/Kirassound/Kirassound.github.io/releases/download/1.0V/PORTAFOLIO_GD_AVILA_GARY.pdf" target="_blank" rel="noopener noreferrer" class="btn-action btn-purple">
                 Ver Portafolio Gráfico Completo (PDF)
             </a>
+        </div>
+    </section>
+
+    <!-- CURRICULUM VITAE -->
+    <section id="curriculum">
+        <h2 class="section-title title-blue">Curriculum Vitae</h2>
+        <div class="about-box">
+            <p>
+                Hoja de vida estructurada bajo el formato estándar de Harvard, que sintetiza mi formación académica en infraestructura y ciberseguridad, certificaciones técnicas, historial laboral multidisciplinario y áreas de especialización en diseño gráfico.
+            </p>
+            <div>
+                <!-- Enlace de descarga directa local del archivo subido a la raíz de tu repositorio -->
+                <a href="https://github.com/Kirassound/Kirassound.github.io/blob/main/CV_AVILA_GARY.pdf" download="CV_Gary_Avila.pdf" class="btn-action btn-blue">
+                    Descargar Curriculum Vitae (PDF)
+                </a>
+                <a href="https://github.com/Kirassound/Kirassound.github.io/blob/main/CV_AVILA_GARY.pdf" target="_blank" rel="noopener noreferrer" class="btn-action btn-outline-white">
+                    Visualizar en Navegador
+                </a>
+            </div>
         </div>
     </section>
 
